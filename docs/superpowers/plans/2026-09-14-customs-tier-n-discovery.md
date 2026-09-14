@@ -138,13 +138,17 @@ while queue:
             record_cycle(path + [supplier_id], shipment)
             continue
 
-        edge_score = score_edge(shipment)
+        relationship_score = score_relationship(
+            shipment,
+            distinct_bol_count_for_pair(supplier_id, buyer_id),
+        )
+        hop_penalty = 1.0 if buyer_tier == 1 else 0.90
         candidate = record_candidate(
             supplier_id=supplier_id,
             buyer_id=buyer_id,
             tier=buyer_tier + 1,
             path=path + [supplier_id],
-            score=path_score * edge_score,
+            score=path_score * relationship_score * hop_penalty,
             bill_of_lading_id=shipment.bill_of_lading_id,
         )
         queue.append((supplier_id, buyer_tier + 1,
@@ -157,13 +161,13 @@ The output is not a tree: retain multiple paths to the same company and report a
 
 ## 4. Confidence calculation
 
-Each accepted shipment edge receives a score between 0 and 1:
+Score each accepted `supplier -> buyer` relationship between 0 and 1:
 
 ```text
-edge score = entity-resolution factor
-           × product-relevance factor
-           × shipment-evidence factor
-           × data-completeness factor
+relationship score = 0.30 × entity-resolution certainty
+                   + 0.30 × material relevance
+                   + 0.25 × repeated-shipment evidence
+                   + 0.15 × data completeness
 ```
 
 Suggested factors:
@@ -171,25 +175,30 @@ Suggested factors:
 | Signal | Factor |
 |---|---:|
 | Exact canonical or documented-alias resolution | 1.00 |
-| Guarded fuzzy resolution | 0.75 |
+| Guarded fuzzy resolution | its normalized similarity score |
 | Unverified company node | 0.60 |
 | Named material / chemical input | 1.00 |
-| Material relevance unclear | 0.75 |
+| Material relevance unclear | 0.50 |
 | Freight, logistics, or packaging | 0.00; park |
-| One distinct BOL for the company pair | 0.80 |
-| Two or more distinct BOLs for the pair | 1.00 |
-| Missing country, weight, or vessel | multiply 0.95 per missing field |
+| One distinct BOL for the company pair | 0.60 |
+| Two distinct BOLs for the company pair | 0.80 |
+| Three or more distinct BOLs for the pair | 1.00 |
+| Missing shipper, consignee, date, or product | park as invalid |
+| Missing country | subtract 0.10 from completeness |
+| Missing weight | subtract 0.05 from completeness |
 
-For a path with *h* shipment edges:
+Use `0.60` for a pair with one distinct BOL. The distinct-BOL count excludes CSV duplicates; vessel name has no effect on confidence.
+
+For a path with *h* supply relationships:
 
 ```text
-path_score = product(edge_score for every edge) × 0.90^(h - 1)
+path_score = product(relationship_score for every relationship) × 0.90^(h - 1)
 ```
 
-The final term expresses the product requirement that deeper discoveries are less certain even when each individual shipment appears credible. If more than one independent path reaches the same company, retain every path and derive the company score as:
+The final term expresses the product requirement that deeper discoveries are less certain even when each individual shipment appears credible. If more than one path reaches the same company, retain every path but use the strongest path as the displayed company score. Do not combine paths in this prototype because they may represent correlated customs evidence.
 
 ```text
-company_score = 1 - product(1 - path_score for independent paths)
+company_score = max(path_score for every discovered path)
 ```
 
 Label scores for display:
