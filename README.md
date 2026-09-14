@@ -35,9 +35,9 @@ The only runtime input is the customs CSV. The small set of facts extracted from
 
 The command writes these files to `output/`:
 
-- `tier_n_candidates.csv` — a compact list of candidate company name, tier depth, and confidence.
+- [`tier_n_candidates.csv`](output/tier_n_candidates.csv) — a compact list of candidate company name, tier depth, and confidence.
 - `tier_n_candidates.json` — candidates plus strongest paths and supporting BOL/product evidence.
-- `tier_n_graph.html` — interactive company graph; hover nodes and edges for details.
+- [`tier_n_graph.html`](output/tier_n_graph.html) — interactive company graph; hover nodes and edges for details.
 - `parked_shipments.json` — excluded relationships and data-quality issues with reasons.
 - `cycles.json` — detected circular paths.
 
