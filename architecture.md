@@ -15,11 +15,11 @@ Solstice is the starting company and is defined as Tier 1. A company shipping to
 
 ## 2. System overview
 
-The system turns raw customs and registry data into a ranked, explainable list of upstream supplier candidates.
+The system turns a customs CSV and embedded registry facts into a ranked, explainable list of upstream supplier candidates. The customs CSV is the only runtime input; the curated registry facts ship with the application.
 
 ```mermaid
 flowchart LR
-    Sources[Customs CSV + registry notes]
+    Sources[Customs CSV + embedded registry facts]
     Resolve[Ingestion and entity resolution<br/>normalization, aliases, group facts]
     Graph[Evidence graph<br/>companies, shipments, products, claims]
     Discover[Tier-N discovery<br/>filtering, traversal, confidence]
@@ -30,7 +30,7 @@ flowchart LR
 
 At a high level, the pipeline:
 
-1. ingests customs records and registry notes;
+1. ingests customs records and loads embedded registry facts;
 2. normalizes and resolves company identities;
 3. builds an evidence graph without discarding source-level detail;
 4. parks records that are invalid or unsuitable for supplier discovery;
@@ -169,6 +169,24 @@ The output is a ranked list of Tier-N supplier candidates. For each candidate, i
 - supporting shipment, BOL, and product evidence.
 
 Alternate paths and cycles are retained. Parked records remain available to analysts with their exclusion reasons.
+
+Run the supplied dataset with:
+
+```bash
+uv run tier-n-discovery \
+  --customs customs_extract.csv \
+  --root "Solstice Materials Co" \
+  --entity-match-threshold 0.94 \
+  --output-dir output
+```
+
+The command writes these five artifacts under `output/`:
+
+- `tier_n_candidates.json`
+- `tier_n_candidates.csv` — candidate company, tier depth, and confidence
+- `parked_shipments.json`
+- `cycles.json`
+- `tier_n_graph.html`
 
 ## 7. Before shipping
 

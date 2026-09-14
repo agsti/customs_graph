@@ -1,0 +1,1384 @@
+{
+  "candidates": [
+    {
+      "company": {
+        "canonical_name": "Aurora Pigments Ltd",
+        "country": "US",
+        "id": "company:aurora-pigments-ltd:us:9384b604e093",
+        "name_variants": []
+      },
+      "confidence": 0.88,
+      "label": "High",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093"
+          ],
+          "product_descriptions": [
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            }
+          ],
+          "relationship_scores": [
+            0.88
+          ],
+          "score": 0.88
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Boreal Resins Inc",
+        "country": "US",
+        "id": "company:boreal-resins-inc:us:d6a1de898036",
+        "name_variants": []
+      },
+      "confidence": 0.8224999999999999,
+      "label": "High",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036"
+          ],
+          "product_descriptions": [
+            "epoxy resin compound",
+            "epoxy resin compound"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999
+          ],
+          "score": 0.8224999999999999
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Meridian Coatings LLC",
+        "country": "US",
+        "id": "company:meridian-coatings-llc:us:79d0a527ad82",
+        "name_variants": []
+      },
+      "confidence": 0.63,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100010"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:meridian-coatings-llc:us:79d0a527ad82"
+          ],
+          "product_descriptions": [
+            "industrial coating additive"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100010"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "industrial coating additive"
+              ],
+              "score": 0.63,
+              "supplier_id": "company:meridian-coatings-llc:us:79d0a527ad82"
+            }
+          ],
+          "relationship_scores": [
+            0.63
+          ],
+          "score": 0.63
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Nordkant Borates AB",
+        "country": "SE",
+        "id": "company:nordkant-borates-ab:se:1664a8e77116",
+        "name_variants": []
+      },
+      "confidence": 0.8262499999999999,
+      "label": "High",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100008",
+            "BOL100009"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:nordkant-borates-ab:se:1664a8e77116"
+          ],
+          "product_descriptions": [
+            "borate compound",
+            "borate compound"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100008",
+                "BOL100009"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "borate compound",
+                "borate compound"
+              ],
+              "score": 0.8262499999999999,
+              "supplier_id": "company:nordkant-borates-ab:se:1664a8e77116"
+            }
+          ],
+          "relationship_scores": [
+            0.8262499999999999
+          ],
+          "score": 0.8262499999999999
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Solstice Analytics Inc",
+        "country": null,
+        "id": "company:solstice-analytics-inc:unknown:d82a67868cf7",
+        "name_variants": []
+      },
+      "confidence": 0.9,
+      "label": "High",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100017"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:solstice-analytics-inc:unknown:d82a67868cf7"
+          ],
+          "product_descriptions": [
+            "laboratory testing reagents"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100017"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "laboratory testing reagents"
+              ],
+              "score": 0.9,
+              "supplier_id": "company:solstice-analytics-inc:unknown:d82a67868cf7"
+            }
+          ],
+          "relationship_scores": [
+            0.9
+          ],
+          "score": 0.9
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Solstice Materials Iberia SA",
+        "country": "ES",
+        "id": "company:solstice-materials-iberia-sa:es:c088b3ab96cb",
+        "name_variants": []
+      },
+      "confidence": 0.83,
+      "label": "High",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100013",
+            "BOL100014"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:solstice-materials-iberia-sa:es:c088b3ab96cb"
+          ],
+          "product_descriptions": [
+            "alumina intermediate",
+            "alumina intermediate"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100013",
+                "BOL100014"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "alumina intermediate",
+                "alumina intermediate"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:solstice-materials-iberia-sa:es:c088b3ab96cb"
+            }
+          ],
+          "relationship_scores": [
+            0.83
+          ],
+          "score": 0.83
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Terra Silica Partners",
+        "country": "US",
+        "id": "company:terra-silica-partners:us:9ddbbd166bfd",
+        "name_variants": []
+      },
+      "confidence": 0.83,
+      "label": "High",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100006",
+            "BOL100007"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:terra-silica-partners:us:9ddbbd166bfd"
+          ],
+          "product_descriptions": [
+            "silica sand",
+            "silica sand"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100006",
+                "BOL100007"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "silica sand",
+                "silica sand"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:terra-silica-partners:us:9ddbbd166bfd"
+            }
+          ],
+          "relationship_scores": [
+            0.83
+          ],
+          "score": 0.83
+        }
+      ],
+      "tier": 2
+    },
+    {
+      "company": {
+        "canonical_name": "Aurora Pigments Distribution GmbH",
+        "country": "DE",
+        "id": "company:aurora-pigments-distribution-gmbh:de:196040184811",
+        "name_variants": []
+      },
+      "confidence": 0.61776,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003",
+            "BOL100023"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093",
+            "company:aurora-pigments-distribution-gmbh:de:196040184811"
+          ],
+          "product_descriptions": [
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100023"
+              ],
+              "buyer_id": "company:aurora-pigments-ltd:us:9384b604e093",
+              "product_descriptions": [
+                "titanium dioxide pigment"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:aurora-pigments-distribution-gmbh:de:196040184811"
+            },
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            }
+          ],
+          "relationship_scores": [
+            0.88,
+            0.78
+          ],
+          "score": 0.61776
+        }
+      ],
+      "tier": 3
+    },
+    {
+      "company": {
+        "canonical_name": "Boreal Resins Iberia SL",
+        "country": "ES",
+        "id": "company:boreal-resins-iberia-sl:es:8f77d0c88fe4",
+        "name_variants": []
+      },
+      "confidence": 0.577395,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005",
+            "BOL100026"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036",
+            "company:boreal-resins-iberia-sl:es:8f77d0c88fe4"
+          ],
+          "product_descriptions": [
+            "epoxy resin compound",
+            "epoxy resin compound",
+            "epoxy resin compound"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100026"
+              ],
+              "buyer_id": "company:boreal-resins-inc:us:d6a1de898036",
+              "product_descriptions": [
+                "epoxy resin compound"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:boreal-resins-iberia-sl:es:8f77d0c88fe4"
+            },
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999,
+            0.78
+          ],
+          "score": 0.577395
+        }
+      ],
+      "tier": 3
+    },
+    {
+      "company": {
+        "canonical_name": "Petrochem Feedstock LLC",
+        "country": "US",
+        "id": "company:petrochem-feedstock-llc:us:a03f167248cc",
+        "name_variants": []
+      },
+      "confidence": 0.6144075,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005",
+            "BOL100024",
+            "BOL100025"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036",
+            "company:petrochem-feedstock-llc:us:a03f167248cc"
+          ],
+          "product_descriptions": [
+            "bisphenol-A precursor",
+            "bisphenol-A precursor",
+            "epoxy resin compound",
+            "epoxy resin compound"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            },
+            {
+              "bol_ids": [
+                "BOL100024",
+                "BOL100025"
+              ],
+              "buyer_id": "company:boreal-resins-inc:us:d6a1de898036",
+              "product_descriptions": [
+                "bisphenol-A precursor",
+                "bisphenol-A precursor"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:petrochem-feedstock-llc:us:a03f167248cc"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999,
+            0.83
+          ],
+          "score": 0.6144075
+        }
+      ],
+      "tier": 3
+    },
+    {
+      "company": {
+        "canonical_name": "Quartz Extraction Co",
+        "country": "US",
+        "id": "company:quartz-extraction-co:us:c0aa05eaf5ca",
+        "name_variants": []
+      },
+      "confidence": 0.58266,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100006",
+            "BOL100007",
+            "BOL100027"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:terra-silica-partners:us:9ddbbd166bfd",
+            "company:quartz-extraction-co:us:c0aa05eaf5ca"
+          ],
+          "product_descriptions": [
+            "raw quartz",
+            "silica sand",
+            "silica sand"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100027"
+              ],
+              "buyer_id": "company:terra-silica-partners:us:9ddbbd166bfd",
+              "product_descriptions": [
+                "raw quartz"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:quartz-extraction-co:us:c0aa05eaf5ca"
+            },
+            {
+              "bol_ids": [
+                "BOL100006",
+                "BOL100007"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "silica sand",
+                "silica sand"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:terra-silica-partners:us:9ddbbd166bfd"
+            }
+          ],
+          "relationship_scores": [
+            0.83,
+            0.78
+          ],
+          "score": 0.58266
+        }
+      ],
+      "tier": 3
+    },
+    {
+      "company": {
+        "canonical_name": "Rutile Mineral Exports Pty",
+        "country": "AU",
+        "id": "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+        "name_variants": []
+      },
+      "confidence": 0.6573599999999999,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003",
+            "BOL100021",
+            "BOL100022"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093",
+            "company:rutile-mineral-exports-pty:au:b586bf539eb5"
+          ],
+          "product_descriptions": [
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium ore concentrate",
+            "titanium ore concentrate"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            },
+            {
+              "bol_ids": [
+                "BOL100021",
+                "BOL100022"
+              ],
+              "buyer_id": "company:aurora-pigments-ltd:us:9384b604e093",
+              "product_descriptions": [
+                "titanium ore concentrate",
+                "titanium ore concentrate"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5"
+            }
+          ],
+          "relationship_scores": [
+            0.88,
+            0.83
+          ],
+          "score": 0.6573599999999999
+        }
+      ],
+      "tier": 3
+    },
+    {
+      "company": {
+        "canonical_name": "Flocculant Chemicals Pty",
+        "country": "AU",
+        "id": "company:flocculant-chemicals-pty:au:70677b50eee2",
+        "name_variants": []
+      },
+      "confidence": 0.4910479199999999,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003",
+            "BOL100021",
+            "BOL100022",
+            "BOL100028",
+            "BOL100029"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093",
+            "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+            "company:flocculant-chemicals-pty:au:70677b50eee2"
+          ],
+          "product_descriptions": [
+            "ore-processing flocculant reagent",
+            "ore-processing flocculant reagent",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium ore concentrate",
+            "titanium ore concentrate"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            },
+            {
+              "bol_ids": [
+                "BOL100028",
+                "BOL100029"
+              ],
+              "buyer_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+              "product_descriptions": [
+                "ore-processing flocculant reagent",
+                "ore-processing flocculant reagent"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:flocculant-chemicals-pty:au:70677b50eee2"
+            },
+            {
+              "bol_ids": [
+                "BOL100021",
+                "BOL100022"
+              ],
+              "buyer_id": "company:aurora-pigments-ltd:us:9384b604e093",
+              "product_descriptions": [
+                "titanium ore concentrate",
+                "titanium ore concentrate"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5"
+            }
+          ],
+          "relationship_scores": [
+            0.88,
+            0.83,
+            0.83
+          ],
+          "score": 0.4910479199999999
+        }
+      ],
+      "tier": 4
+    },
+    {
+      "company": {
+        "canonical_name": "Petrochem Feedstock Distribution LLC",
+        "country": "US",
+        "id": "company:petrochem-feedstock-distribution-llc:us:0ed7292977d8",
+        "name_variants": []
+      },
+      "confidence": 0.431314065,
+      "label": "Low",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005",
+            "BOL100024",
+            "BOL100025",
+            "BOL100033"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036",
+            "company:petrochem-feedstock-llc:us:a03f167248cc",
+            "company:petrochem-feedstock-distribution-llc:us:0ed7292977d8"
+          ],
+          "product_descriptions": [
+            "bisphenol-A precursor",
+            "bisphenol-A precursor",
+            "bisphenol-A precursor",
+            "epoxy resin compound",
+            "epoxy resin compound"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            },
+            {
+              "bol_ids": [
+                "BOL100033"
+              ],
+              "buyer_id": "company:petrochem-feedstock-llc:us:a03f167248cc",
+              "product_descriptions": [
+                "bisphenol-A precursor"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:petrochem-feedstock-distribution-llc:us:0ed7292977d8"
+            },
+            {
+              "bol_ids": [
+                "BOL100024",
+                "BOL100025"
+              ],
+              "buyer_id": "company:boreal-resins-inc:us:d6a1de898036",
+              "product_descriptions": [
+                "bisphenol-A precursor",
+                "bisphenol-A precursor"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:petrochem-feedstock-llc:us:a03f167248cc"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999,
+            0.83,
+            0.78
+          ],
+          "score": 0.431314065
+        }
+      ],
+      "tier": 4
+    },
+    {
+      "company": {
+        "canonical_name": "Phenol Basestock Corp",
+        "country": "US",
+        "id": "company:phenol-basestock-corp:us:293b6cffcaaa",
+        "name_variants": []
+      },
+      "confidence": 0.4589624025,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005",
+            "BOL100024",
+            "BOL100025",
+            "BOL100031",
+            "BOL100032"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036",
+            "company:petrochem-feedstock-llc:us:a03f167248cc",
+            "company:phenol-basestock-corp:us:293b6cffcaaa"
+          ],
+          "product_descriptions": [
+            "bisphenol-A precursor",
+            "bisphenol-A precursor",
+            "epoxy resin compound",
+            "epoxy resin compound",
+            "phenol feedstock",
+            "phenol feedstock"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            },
+            {
+              "bol_ids": [
+                "BOL100024",
+                "BOL100025"
+              ],
+              "buyer_id": "company:boreal-resins-inc:us:d6a1de898036",
+              "product_descriptions": [
+                "bisphenol-A precursor",
+                "bisphenol-A precursor"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:petrochem-feedstock-llc:us:a03f167248cc"
+            },
+            {
+              "bol_ids": [
+                "BOL100031",
+                "BOL100032"
+              ],
+              "buyer_id": "company:petrochem-feedstock-llc:us:a03f167248cc",
+              "product_descriptions": [
+                "phenol feedstock",
+                "phenol feedstock"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:phenol-basestock-corp:us:293b6cffcaaa"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999,
+            0.83,
+            0.83
+          ],
+          "score": 0.4589624025
+        }
+      ],
+      "tier": 4
+    },
+    {
+      "company": {
+        "canonical_name": "RUTILE MINERAL HOLDINGS PTY",
+        "country": "AU",
+        "id": "company:rutile-mineral-holdings-pty:au:03e5189de689",
+        "name_variants": []
+      },
+      "confidence": 0.46146672,
+      "label": "Medium",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003",
+            "BOL100021",
+            "BOL100022",
+            "BOL100030"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093",
+            "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+            "company:rutile-mineral-holdings-pty:au:03e5189de689"
+          ],
+          "product_descriptions": [
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium ore concentrate",
+            "titanium ore concentrate",
+            "titanium ore concentrate"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            },
+            {
+              "bol_ids": [
+                "BOL100021",
+                "BOL100022"
+              ],
+              "buyer_id": "company:aurora-pigments-ltd:us:9384b604e093",
+              "product_descriptions": [
+                "titanium ore concentrate",
+                "titanium ore concentrate"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5"
+            },
+            {
+              "bol_ids": [
+                "BOL100030"
+              ],
+              "buyer_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+              "product_descriptions": [
+                "titanium ore concentrate"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:rutile-mineral-holdings-pty:au:03e5189de689"
+            }
+          ],
+          "relationship_scores": [
+            0.88,
+            0.83,
+            0.78
+          ],
+          "score": 0.46146672
+        }
+      ],
+      "tier": 4
+    },
+    {
+      "company": {
+        "canonical_name": "Acrylamide Monomer Pty",
+        "country": "AU",
+        "id": "company:acrylamide-monomer-pty:au:8808231fd285",
+        "name_variants": []
+      },
+      "confidence": 0.3447156398399999,
+      "label": "Low",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003",
+            "BOL100021",
+            "BOL100022",
+            "BOL100028",
+            "BOL100029",
+            "BOL100034"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093",
+            "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+            "company:flocculant-chemicals-pty:au:70677b50eee2",
+            "company:acrylamide-monomer-pty:au:8808231fd285"
+          ],
+          "product_descriptions": [
+            "acrylamide monomer",
+            "ore-processing flocculant reagent",
+            "ore-processing flocculant reagent",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium ore concentrate",
+            "titanium ore concentrate"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100034"
+              ],
+              "buyer_id": "company:flocculant-chemicals-pty:au:70677b50eee2",
+              "product_descriptions": [
+                "acrylamide monomer"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:acrylamide-monomer-pty:au:8808231fd285"
+            },
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            },
+            {
+              "bol_ids": [
+                "BOL100028",
+                "BOL100029"
+              ],
+              "buyer_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+              "product_descriptions": [
+                "ore-processing flocculant reagent",
+                "ore-processing flocculant reagent"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:flocculant-chemicals-pty:au:70677b50eee2"
+            },
+            {
+              "bol_ids": [
+                "BOL100021",
+                "BOL100022"
+              ],
+              "buyer_id": "company:aurora-pigments-ltd:us:9384b604e093",
+              "product_descriptions": [
+                "titanium ore concentrate",
+                "titanium ore concentrate"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5"
+            }
+          ],
+          "relationship_scores": [
+            0.88,
+            0.83,
+            0.83,
+            0.78
+          ],
+          "score": 0.3447156398399999
+        }
+      ],
+      "tier": 5
+    },
+    {
+      "company": {
+        "canonical_name": "Benzene Feedstock Refining Co",
+        "country": "US",
+        "id": "company:benzene-feedstock-refining-co:us:4707dd92f0c1",
+        "name_variants": []
+      },
+      "confidence": 0.322191606555,
+      "label": "Low",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005",
+            "BOL100024",
+            "BOL100025",
+            "BOL100031",
+            "BOL100032",
+            "BOL100036"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036",
+            "company:petrochem-feedstock-llc:us:a03f167248cc",
+            "company:phenol-basestock-corp:us:293b6cffcaaa",
+            "company:benzene-feedstock-refining-co:us:4707dd92f0c1"
+          ],
+          "product_descriptions": [
+            "benzene feedstock",
+            "bisphenol-A precursor",
+            "bisphenol-A precursor",
+            "epoxy resin compound",
+            "epoxy resin compound",
+            "phenol feedstock",
+            "phenol feedstock"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100036"
+              ],
+              "buyer_id": "company:phenol-basestock-corp:us:293b6cffcaaa",
+              "product_descriptions": [
+                "benzene feedstock"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:benzene-feedstock-refining-co:us:4707dd92f0c1"
+            },
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            },
+            {
+              "bol_ids": [
+                "BOL100024",
+                "BOL100025"
+              ],
+              "buyer_id": "company:boreal-resins-inc:us:d6a1de898036",
+              "product_descriptions": [
+                "bisphenol-A precursor",
+                "bisphenol-A precursor"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:petrochem-feedstock-llc:us:a03f167248cc"
+            },
+            {
+              "bol_ids": [
+                "BOL100031",
+                "BOL100032"
+              ],
+              "buyer_id": "company:petrochem-feedstock-llc:us:a03f167248cc",
+              "product_descriptions": [
+                "phenol feedstock",
+                "phenol feedstock"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:phenol-basestock-corp:us:293b6cffcaaa"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999,
+            0.83,
+            0.83,
+            0.78
+          ],
+          "score": 0.322191606555
+        }
+      ],
+      "tier": 5
+    },
+    {
+      "company": {
+        "canonical_name": "Flocculant Chemicals Group Pty",
+        "country": "AU",
+        "id": "company:flocculant-chemicals-group-pty:au:9147b702ca81",
+        "name_variants": []
+      },
+      "confidence": 0.3447156398399999,
+      "label": "Low",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100001",
+            "BOL100002",
+            "BOL100003",
+            "BOL100021",
+            "BOL100022",
+            "BOL100028",
+            "BOL100029",
+            "BOL100035"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:aurora-pigments-ltd:us:9384b604e093",
+            "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+            "company:flocculant-chemicals-pty:au:70677b50eee2",
+            "company:flocculant-chemicals-group-pty:au:9147b702ca81"
+          ],
+          "product_descriptions": [
+            "ore-processing flocculant reagent",
+            "ore-processing flocculant reagent",
+            "ore-processing flocculant reagent",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium dioxide pigment",
+            "titanium ore concentrate",
+            "titanium ore concentrate"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100001",
+                "BOL100002",
+                "BOL100003"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "titanium dioxide pigment",
+                "titanium dioxide pigment",
+                "titanium dioxide pigment"
+              ],
+              "score": 0.88,
+              "supplier_id": "company:aurora-pigments-ltd:us:9384b604e093"
+            },
+            {
+              "bol_ids": [
+                "BOL100035"
+              ],
+              "buyer_id": "company:flocculant-chemicals-pty:au:70677b50eee2",
+              "product_descriptions": [
+                "ore-processing flocculant reagent"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:flocculant-chemicals-group-pty:au:9147b702ca81"
+            },
+            {
+              "bol_ids": [
+                "BOL100028",
+                "BOL100029"
+              ],
+              "buyer_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5",
+              "product_descriptions": [
+                "ore-processing flocculant reagent",
+                "ore-processing flocculant reagent"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:flocculant-chemicals-pty:au:70677b50eee2"
+            },
+            {
+              "bol_ids": [
+                "BOL100021",
+                "BOL100022"
+              ],
+              "buyer_id": "company:aurora-pigments-ltd:us:9384b604e093",
+              "product_descriptions": [
+                "titanium ore concentrate",
+                "titanium ore concentrate"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:rutile-mineral-exports-pty:au:b586bf539eb5"
+            }
+          ],
+          "relationship_scores": [
+            0.88,
+            0.83,
+            0.83,
+            0.78
+          ],
+          "score": 0.3447156398399999
+        }
+      ],
+      "tier": 5
+    },
+    {
+      "company": {
+        "canonical_name": "Phenol Basestock Holdings Corp",
+        "country": "US",
+        "id": "company:phenol-basestock-holdings-corp:us:b9787d0b1f88",
+        "name_variants": []
+      },
+      "confidence": 0.322191606555,
+      "label": "Low",
+      "paths": [
+        {
+          "bol_ids": [
+            "BOL100004",
+            "BOL100005",
+            "BOL100024",
+            "BOL100025",
+            "BOL100031",
+            "BOL100032",
+            "BOL100037"
+          ],
+          "company_ids": [
+            "company:solstice-materials-co:unknown:27b70500c3a9",
+            "company:boreal-resins-inc:us:d6a1de898036",
+            "company:petrochem-feedstock-llc:us:a03f167248cc",
+            "company:phenol-basestock-corp:us:293b6cffcaaa",
+            "company:phenol-basestock-holdings-corp:us:b9787d0b1f88"
+          ],
+          "product_descriptions": [
+            "bisphenol-A precursor",
+            "bisphenol-A precursor",
+            "epoxy resin compound",
+            "epoxy resin compound",
+            "phenol feedstock",
+            "phenol feedstock",
+            "phenol feedstock"
+          ],
+          "relationship_evidence": [
+            {
+              "bol_ids": [
+                "BOL100004",
+                "BOL100005"
+              ],
+              "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+              "product_descriptions": [
+                "epoxy resin compound",
+                "epoxy resin compound"
+              ],
+              "score": 0.8224999999999999,
+              "supplier_id": "company:boreal-resins-inc:us:d6a1de898036"
+            },
+            {
+              "bol_ids": [
+                "BOL100024",
+                "BOL100025"
+              ],
+              "buyer_id": "company:boreal-resins-inc:us:d6a1de898036",
+              "product_descriptions": [
+                "bisphenol-A precursor",
+                "bisphenol-A precursor"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:petrochem-feedstock-llc:us:a03f167248cc"
+            },
+            {
+              "bol_ids": [
+                "BOL100031",
+                "BOL100032"
+              ],
+              "buyer_id": "company:petrochem-feedstock-llc:us:a03f167248cc",
+              "product_descriptions": [
+                "phenol feedstock",
+                "phenol feedstock"
+              ],
+              "score": 0.83,
+              "supplier_id": "company:phenol-basestock-corp:us:293b6cffcaaa"
+            },
+            {
+              "bol_ids": [
+                "BOL100037"
+              ],
+              "buyer_id": "company:phenol-basestock-corp:us:293b6cffcaaa",
+              "product_descriptions": [
+                "phenol feedstock"
+              ],
+              "score": 0.78,
+              "supplier_id": "company:phenol-basestock-holdings-corp:us:b9787d0b1f88"
+            }
+          ],
+          "relationship_scores": [
+            0.8224999999999999,
+            0.83,
+            0.83,
+            0.78
+          ],
+          "score": 0.322191606555
+        }
+      ],
+      "tier": 5
+    }
+  ],
+  "root_company_id": "company:solstice-materials-co:unknown:27b70500c3a9"
+}

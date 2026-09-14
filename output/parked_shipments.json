@@ -1,0 +1,47 @@
+{
+  "data_quality_issues": [],
+  "parked_shipments": [
+    {
+      "bill_of_lading_id": "BOL100011",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "intra_group",
+      "supplier_id": "company:solstice-materials-europe-gmbh:de:785e13e7d4d2"
+    },
+    {
+      "bill_of_lading_id": "BOL100012",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "intra_group",
+      "supplier_id": "company:solstice-materials-europe-gmbh:de:785e13e7d4d2"
+    },
+    {
+      "bill_of_lading_id": "BOL100015",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "freight_logistics_or_packaging",
+      "supplier_id": "company:solstice-logistics-hub-llc:us:e450a7860266"
+    },
+    {
+      "bill_of_lading_id": "BOL100016",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "freight_logistics_or_packaging",
+      "supplier_id": "company:solstice-logistics-hub-llc:us:e450a7860266"
+    },
+    {
+      "bill_of_lading_id": "BOL100018",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "freight_logistics_or_packaging",
+      "supplier_id": "company:global-cargo-solutions-llc:us:4d5eaa6e9400"
+    },
+    {
+      "bill_of_lading_id": "BOL100019",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "freight_logistics_or_packaging",
+      "supplier_id": "company:global-cargo-solutions-llc:us:4d5eaa6e9400"
+    },
+    {
+      "bill_of_lading_id": "BOL100020",
+      "buyer_id": "company:solstice-materials-co:unknown:27b70500c3a9",
+      "reason": "intra_group",
+      "supplier_id": "company:solstice-materials-europe-gmbh:de:785e13e7d4d2"
+    }
+  ]
+}
