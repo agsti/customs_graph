@@ -86,9 +86,11 @@ class BrowserGraph:
                 buyer_id,
                 arrows="to",
                 title=self._edge_title(scores, products, supporting_bols),
+                facts=self._edge_facts(relationships),
             )
 
         network.write_html(str(output_path), open_browser=False, notebook=False)
+        self._add_edge_inspector(output_path)
         return output_path
 
     @staticmethod
@@ -149,3 +151,88 @@ class BrowserGraph:
                 f"BOL IDs: {escape(', '.join(bol_ids))}",
             )
         )
+
+    @staticmethod
+    def _edge_facts(relationships: list[RelationshipPathEvidence]) -> list[dict[str, object]]:
+        facts = {
+            (
+                relationship.score,
+                tuple(sorted(set(relationship.bol_ids))),
+                tuple(sorted(set(relationship.product_descriptions))),
+            )
+            for relationship in relationships
+        }
+        return [
+            {
+                "score": score,
+                "bol_ids": list(bol_ids),
+                "product_descriptions": list(products),
+            }
+            for score, bol_ids, products in sorted(facts)
+        ]
+
+    @staticmethod
+    def _add_edge_inspector(output_path: Path) -> None:
+        inspector = """
+<style>
+  #relationship-facts { border-top: 1px solid #d0d7de; font: 14px/1.4 sans-serif; margin-top: 16px; padding: 16px; }
+  #relationship-facts h2 { font-size: 18px; margin: 0 0 12px; }
+  #relationship-facts .table-scroll { max-height: 35vh; overflow: auto; }
+  #relationship-facts table { border-collapse: collapse; min-width: 720px; width: 100%; }
+  #relationship-facts th { background: #f6f8fa; position: sticky; text-align: left; top: 0; }
+  #relationship-facts th, #relationship-facts td { border: 1px solid #d0d7de; padding: 8px; vertical-align: top; }
+</style>
+<section id="relationship-facts" aria-live="polite">
+  <h2 id="relationship-facts-title">Select a node or edge to inspect linking facts</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Supplier</th><th>Buyer</th><th>Score</th><th>BOL IDs</th><th>Products</th></tr></thead>
+      <tbody id="relationship-facts-body"></tbody>
+    </table>
+  </div>
+</section>
+<script>
+  const relationshipFactsTitle = document.getElementById("relationship-facts-title");
+  const relationshipFactsBody = document.getElementById("relationship-facts-body");
+  const renderFacts = (title, relationships) => {
+    relationshipFactsTitle.textContent = title;
+    relationshipFactsBody.replaceChildren();
+    for (const { supplier, buyer, fact } of relationships) {
+      const row = document.createElement("tr");
+      for (const value of [supplier, buyer, fact.score.toFixed(2), fact.bol_ids.join(", "), fact.product_descriptions.join(", ")]) {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        row.append(cell);
+      }
+      relationshipFactsBody.append(row);
+    }
+  };
+  const clearRelationshipFacts = () => {
+    relationshipFactsTitle.textContent = "Select a node or edge to inspect linking facts";
+    relationshipFactsBody.replaceChildren();
+  };
+  const clearWhenNothingSelected = () => {
+    if (!network.getSelectedEdges().length && !network.getSelectedNodes().length) clearRelationshipFacts();
+  };
+  network.on("selectEdge", ({ edges: selectedEdges }) => {
+    if (network.getSelectedNodes().length) return;
+    const edge = edges.get(selectedEdges[0]);
+    const supplier = nodes.get(edge.from).label;
+    const buyer = nodes.get(edge.to).label;
+    renderFacts(`${supplier} → ${buyer}`, (edge.facts || []).map((fact) => ({ supplier, buyer, fact })));
+  });
+  network.on("selectNode", ({ nodes: selectedNodes }) => {
+    const buyer = nodes.get(selectedNodes[0]);
+    const incoming = edges.get({ filter: (edge) => edge.to === buyer.id });
+    const relationships = incoming.flatMap((edge) => {
+      const supplier = nodes.get(edge.from).label;
+      return (edge.facts || []).map((fact) => ({ supplier, buyer: buyer.label, fact }));
+    });
+    renderFacts(`Suppliers to ${buyer.label}`, relationships);
+  });
+  network.on("deselectEdge", clearWhenNothingSelected);
+  network.on("deselectNode", clearWhenNothingSelected);
+</script>
+"""
+        html = output_path.read_text(encoding="utf-8")
+        output_path.write_text(html.replace("    </body>", f"{inspector}</body>"), encoding="utf-8")

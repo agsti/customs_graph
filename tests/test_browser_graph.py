@@ -188,6 +188,126 @@ def test_render_keeps_multi_hop_edge_evidence_scoped_to_its_relationship(tmp_pat
     assert all(value in root_node["title"] for value in ("Score: N/A", "Label: Root", "Tier: 1", "Products: None", "BOL IDs: None"))
 
 
+def test_render_adds_each_linking_fact_to_the_selectable_edge(tmp_path) -> None:
+    root_id = "company:root:us"
+    supplier = Company("company:supplier:us", "Supplier", "US")
+    result = DiscoveryResult(
+        root_company_id=root_id,
+        candidates={
+            supplier.id: Candidate(
+                supplier,
+                2,
+                [
+                    CandidatePath(
+                        (root_id, supplier.id),
+                        (0.8,),
+                        ("BOL-ONE",),
+                        ("silica sand",),
+                        0.8,
+                        (
+                            RelationshipPathEvidence(
+                                supplier.id,
+                                root_id,
+                                0.8,
+                                ("BOL-ONE",),
+                                ("silica sand",),
+                            ),
+                        ),
+                    ),
+                    CandidatePath(
+                        (root_id, supplier.id),
+                        (0.6,),
+                        ("BOL-TWO",),
+                        ("quartz powder",),
+                        0.6,
+                        (
+                            RelationshipPathEvidence(
+                                supplier.id,
+                                root_id,
+                                0.6,
+                                ("BOL-TWO",),
+                                ("quartz powder",),
+                            ),
+                        ),
+                    ),
+                ],
+                0.8,
+                "High",
+            )
+        },
+    )
+
+    html = BrowserGraph().render(result, tmp_path / "tier_n_graph.html").read_text(encoding="utf-8")
+    edge = next(edge for edge in _dataset(html, "edges") if edge["from"] == supplier.id)
+
+    assert edge["facts"] == [
+        {"score": 0.6, "bol_ids": ["BOL-TWO"], "product_descriptions": ["quartz powder"]},
+        {"score": 0.8, "bol_ids": ["BOL-ONE"], "product_descriptions": ["silica sand"]},
+    ]
+    assert 'network.on("selectNode"' in html
+    assert "if (network.getSelectedNodes().length) return;" in html
+    assert all(header in html for header in ("<table>", "<th>Supplier</th>", "<th>BOL IDs</th>"))
+
+
+def test_render_keeps_facts_for_every_incoming_relationship(tmp_path) -> None:
+    root_id = "company:root:us"
+    supplier_a = Company("company:a:us", "Supplier A", "US")
+    supplier_b = Company("company:b:us", "Supplier B", "US")
+    result = DiscoveryResult(
+        root_company_id=root_id,
+        candidates={
+            supplier_a.id: Candidate(
+                supplier_a,
+                2,
+                [
+                    CandidatePath(
+                        (root_id, supplier_a.id),
+                        (0.8,),
+                        ("A-BOL",),
+                        ("silica sand",),
+                        0.8,
+                        (
+                            RelationshipPathEvidence(
+                                supplier_a.id, root_id, 0.8, ("A-BOL",), ("silica sand",)
+                            ),
+                        ),
+                    )
+                ],
+                0.8,
+                "High",
+            ),
+            supplier_b.id: Candidate(
+                supplier_b,
+                2,
+                [
+                    CandidatePath(
+                        (root_id, supplier_b.id),
+                        (0.6,),
+                        ("B-BOL",),
+                        ("quartz powder",),
+                        0.6,
+                        (
+                            RelationshipPathEvidence(
+                                supplier_b.id, root_id, 0.6, ("B-BOL",), ("quartz powder",)
+                            ),
+                        ),
+                    )
+                ],
+                0.6,
+                "Medium",
+            ),
+        },
+    )
+
+    html = BrowserGraph().render(result, tmp_path / "tier_n_graph.html").read_text(encoding="utf-8")
+    incoming_edges = [edge for edge in _dataset(html, "edges") if edge["to"] == root_id]
+
+    assert [(edge["from"], edge["facts"]) for edge in incoming_edges] == [
+        (supplier_a.id, [{"score": 0.8, "bol_ids": ["A-BOL"], "product_descriptions": ["silica sand"]}]),
+        (supplier_b.id, [{"score": 0.6, "bol_ids": ["B-BOL"], "product_descriptions": ["quartz powder"]}]),
+    ]
+
+
 def _dataset(html: str, name: str) -> list[dict[str, object]]:
     match = re.search(rf"{name} = new vis.DataSet\((\[.*?\])\);", html, re.DOTALL)
     assert match is not None

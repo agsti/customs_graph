@@ -36,7 +36,7 @@ The only runtime input is the customs CSV. The small set of facts extracted from
 The command writes these files to `output/`:
 
 - [`tier_n_candidates.csv`](output/tier_n_candidates.csv) — a compact list of candidate company name, tier depth, and confidence.
-- [Interactive company graph](https://agsti.github.io/customs_graph/output/tier_n_graph.html) — hover nodes and edges for details.
+- [Interactive company graph](https://agsti.github.io/customs_graph/output/tier_n_graph.html) — hover for summaries; click a node or edge to inspect linking facts in the table below.
 
 Candidate confidence is labeled High (`>= 0.75`), Medium (`>= 0.45`), or Low. Confidence compounds as the path gets deeper, so deeper candidates should be treated as weaker signals.
 
